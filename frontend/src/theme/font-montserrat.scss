@@ -1,0 +1,76 @@
+
+//FONTS
+//Montserrat Style Font
+$font-family-md-base: "Montserrat", sans-serif !important;
+$font-family-ios-base: "Montserrat", sans-serif !important;
+$font-family-wp-base: "Montserrat", sans-serif !important;
+$font-family-base: "Montserrat", sans-serif !important;
+
+body {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+p,
+button,
+ion-button,
+ion-checkbox,
+ion-radio,
+ion-label,
+ion-title,
+ion-item {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+button,
+ion-button,
+ion-label,
+ion-title {
+  color: var(--ion-color-dark);
+  font-weight: bold !important;
+}
+
+p{
+  color: var(--ion-color-dark) !important;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-style: light;
+  font-weight: 300;
+  src: url("/assets/fonts/montserrat/Montserrat-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/montserrat/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-style: semi-bold;
+  font-weight: 600;
+  src: url("/assets/fonts/montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-style: bold;
+  font-weight: 700;
+  src: url("/assets/fonts/montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-style: extra-bold;
+  font-weight: 900;
+  src: url("/assets/fonts/montserrat/Montserrat-ExtraBold.ttf");
+}

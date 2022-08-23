@@ -1,0 +1,12 @@
+Title: Ecommerce Theme
+Author: ionic4themes
+Contact: info@ionic4themes.com
+---------
+
+## 1.0.0 - 2020-11-15
+- Initial release
+
+## 1.1.0 - 2020-12-3
+- Some responsive css added
+- Transparency issue solved
+- Standar buttons for ios and md

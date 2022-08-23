@@ -1,0 +1,16 @@
+<!-- Gradient filled btn-->
+<div *ngIf="btnOptions.btnStyleType === BTN_STYLE.primary" class="module-border-wrap primary-btn"
+     routerLink="{{btnOptions.url}}">
+    <div class="module-primary">
+        {{ btnOptions.label}}
+    </div>
+</div>
+<!-- Gradient border btn -->
+<div *ngIf="btnOptions.btnStyleType === BTN_STYLE.secondary" class="module-border-wrap" routerLink="{{btnOptions.url}}">
+    <div class="white-container">
+        <div class="module btn-gradient-text">
+            {{ btnOptions.label}}
+        </div>
+    </div>
+</div>
+

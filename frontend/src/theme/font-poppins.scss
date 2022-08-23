@@ -1,0 +1,51 @@
+$font-family-base: "Poppins", sans-serif !default;
+
+body {
+  font-family: "Poppins" !important;
+  font-weight: 300 !important;
+}
+
+h1, h2, h3, h4, h5, h6, p, button, ion-title, li, ul, b, article {
+  font-family: "Poppins" !important;
+}
+
+@font-face {
+  font-family: 'Poppins-Light';
+  font-style: light;
+  font-weight: 300;
+  src: url('/assets/fonts/poppins/Poppins-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-SemiBold';
+  font-style: semi-bold;
+  font-weight: 600;
+  src: url('/assets/fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-Medium';
+  font-style: semi-bold;
+  font-weight: 600;
+  src: url('/assets/fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  font-style: bold;
+  font-weight: 700;
+  src: url('/assets/fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-ExtraBold';
+  font-weight: 900;
+  src: url('/assets/fonts/poppins/Poppins-ExtraBold.ttf');
+}

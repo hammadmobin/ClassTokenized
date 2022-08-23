@@ -1,0 +1,45 @@
+$font-family-base: 'Inconsolata', monospace !important;
+
+body{
+  font-family: 'Inconsolata', monospace !important;
+  font-weight: 300 !important;
+}
+
+h1, h2, p, button, ion-title {
+  font-family: 'Inconsolata', monospace !important;
+}
+
+@font-face {
+  font-family: 'Inconsolata', monospace !important;
+  font-style: light;
+  font-weight: 300;
+  src: url('/assets/fonts/inconsolata/Inconsolata-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Inconsolata', monospace !important;
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/inconsolata/Inconsolata-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Inconsolata', monospace !important;
+  font-style: semi-bold;
+  font-weight: 600;
+  src: url('/assets/fonts/inconsolata/Inconsolata-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Inconsolata', monospace !important;
+  font-style: bold;
+  font-weight: 700;
+  src: url('/assets/fonts/inconsolata/Inconsolata-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Inconsolata', monospace !important;
+  font-style: extra-bold;
+  font-weight: 900;
+  src: url('/assets/fonts/inconsolata/Inconsolata-Bold.ttf');
+}

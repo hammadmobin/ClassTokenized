@@ -1,0 +1,62 @@
+<!-- For large devices and screens -->
+<div *ngIf="screenType === screenIDs.large" class="rosa-nav-container" hidden-max-lg>
+  <div class="rosa-banner" routerLink="/home">
+    <ion-img class="banner-img" src="assets/icon/favi-black-font.png">
+    </ion-img>
+  </div>
+  <div class="rosa-nav-menu">
+    <ul class="rosa-nav-list">
+      <li class="nav-list-item">
+        <app-search-bar class="nav-bar-search"></app-search-bar>
+      </li>
+      <li class="nav-list-item" routerLink="/home">
+        Explore
+      </li>
+      <li class="nav-list-item nav-dropdown">
+        Community
+      </li>
+      <li class="nav-list-item">
+        Collections
+      </li>
+      <li class="nav-list-item">
+        Following
+      </li>
+      <div class="nav-right-container">
+        <!--      Guest actions -->
+        <div class="nav-right-action">
+          <app-button *ngIf="currentRoute!='/login' && !isAuthenticated" [btnOptions]="createBtnOptions"
+                      class="rosa-btn-sm">
+          </app-button>
+          <app-button *ngIf="currentRoute!='/login' && !isAuthenticated" [btnOptions]="connectBtnOptions"
+                      class="rosa-btn-sm">
+          </app-button>
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>
+<!-- For small devices/screens-->
+<div *ngIf="screenType !== screenIDs.large" hidden-min-lg>
+  <ion-header class="ion-no-border">
+    <ion-toolbar class="ion-justify-content-center ion-text-center ion-align-items-center">
+      <ion-buttons slot="secondary">
+        <ion-icon class="home-nav-icon" routerLink="/home" src="/assets/img/RosaGradient.svg"></ion-icon>
+      </ion-buttons>
+      <!--      <ion-title *ngIf="!title">-->
+      <!--        <ion-icon class="logo-banner-sm" routerLink="/home" src="assets/icon/favicon.png">-->
+      <!--        </ion-icon>-->
+      <!--      </ion-title>-->
+      <!--      <ion-title *ngIf="title">-->
+      <!--        {{title}}-->
+      <!--      </ion-title>-->
+      <div class="nav-search-container">
+        <app-search-bar class="nav-searchbar"></app-search-bar>
+      </div>
+      <!--      Guest actions -->
+      <ion-buttons slot="primary">
+        <ion-menu-button class="menu-icon"></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+</div>
+

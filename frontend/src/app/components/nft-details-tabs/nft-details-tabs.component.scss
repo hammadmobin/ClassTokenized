@@ -1,0 +1,136 @@
+@import '~compass-mixins/lib/compass/css3';
+@import "src/theme/screen.scss";
+
+$background: white;
+$tabs-base-color: #fff;
+label, input, .tabs, {
+  margin: 0;
+  padding: 0;
+  @include box-sizing(border-box);
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+  float: left;
+
+  span {
+    font-size: 13px;
+    display: block;
+    padding-left: 4px;
+  }
+}
+
+.tabs {
+  width: 100%;
+  float: none;
+  list-style: none;
+  position: relative;
+  text-align: left;
+
+  li {
+    float: left;
+    margin-right: 10px;
+    display: block;
+  }
+
+  input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+  }
+
+  label {
+    display: block;
+    border-radius: 2px 2px 0 0;
+    font-size: 1.1rem;
+    z-index: 3;
+    font-weight: normal;
+    background: $background;
+    cursor: pointer;
+    position: relative;
+    top: 4px;
+    @include transition(all 0.2s ease-in-out);
+
+    &:hover {
+      border-bottom: solid 1px black;
+    }
+  }
+
+  .tab-content {
+    display: none;
+    overflow-y: scroll;
+    width: 100%;
+    font-size: 17px;
+    line-height: 25px;
+    position: absolute;
+    top: 53px;
+    left: 0;
+    background: transparent;
+    max-height: 15rem;
+  }
+
+  //The Magic
+  [id^="tab"]:checked + label {
+    top: 0;
+    background: $background;
+    border-bottom: black 1px solid;
+  }
+
+  [id^="tab"]:checked ~ [id^="tab-content"] {
+    display: block;
+  }
+}
+
+p.link {
+  clear: both;
+  margin: 380px 0 0 15px;
+
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: $tabs-base-color;
+    @include transition(all 0.2s ease-in);
+
+    &:hover {
+      background-color: $tabs-base-color;
+    }
+  }
+}
+
+.tab-content::-webkit-scrollbar {
+  width: 0.1rem;
+}
+
+.tab-content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px transparent;
+}
+
+.tab-content::-webkit-scrollbar-thumb {
+  background-color: var(--ion-color-dark);
+}
+
+
+$tab-details-size-map: (
+        'xs': 25rem,
+        'sm': 26rem,
+        'md': 26rem,
+        'lg': 35rem,
+        'xl': 40rem
+) !default;
+
+// Generate different detail,offer and history tab sizes based on the device screen size
+// for each screen size (keySize) ,load the appropriate padding and sizing
+@each $keySize, $valueSize in $screen-breakpoints {
+  $tab-dets-size: map-get($tab-details-size-map, $keySize);
+  @media (min-width: $valueSize) {
+    .tab-content {
+      min-width: $tab-dets-size;
+    }
+  }
+}

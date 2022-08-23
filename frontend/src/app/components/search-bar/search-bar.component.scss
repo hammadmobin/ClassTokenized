@@ -1,0 +1,13 @@
+ion-searchbar {
+  --background: #ffffff;
+  border: 0.062rem solid var(--ion-color-light);
+  box-sizing: border-box;
+  --border-radius: 0.625rem;
+  border-radius: 0.937rem;
+  max-height: 2.5rem;
+  padding-top: 0 !important; // add padding
+  padding-bottom: 0 !important; // add padding
+  --placeholder-font-weight: normal;
+  --placeholder-color: var(--ion-color-gray2);
+  --icon-color: var(--ion-color-gray2);
+}

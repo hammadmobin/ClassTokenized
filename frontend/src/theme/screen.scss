@@ -1,0 +1,90 @@
+// Breakpoints for different devices.
+
+$screen-breakpoints: (
+        'xs': 0,
+        'sm': 420px,
+        'md': 768px,
+        'lg': 1025px,
+        'xl': 1920px,
+) !default;
+
+$screen-rem-bases: (
+        'xs': 11px,
+        'sm': 12px,
+        'md': 14px,
+        'lg': 16px,
+        'xl': 18px
+) !default;
+
+$screen-rem-bases: (
+        'xs': 11px,
+        'sm': 12px,
+        'md': 14px,
+        'lg': 16px,
+        'xl': 18px
+) !default;
+
+
+// A map variable where each item is a map( Key , Value pairs of various style blocks and elements used in the slider)
+$screen-slider-styles: (
+        'xs': (
+        ),
+        'sm': (
+        ),
+        'md': (
+        ),
+        'lg': (
+        ),
+        'xl': (
+        )
+) !default;
+
+
+@each $keySize, $valueSize in $screen-breakpoints {
+  // Hidden when for screens with a minimum (lower limit of $valueSize) i.e hidden for items with screen sizes ABOVE $valueSize
+  [hidden-min-#{$keySize}] {
+    @media (min-width: $valueSize) {
+      display: none !important;
+    }
+  }
+  // Hidden when for screens with a maximum (upperlimit of $valueSize) i.e hidden for items with screen sizes BELOW $valueSize
+  [hidden-max-#{$keySize}] {
+    @media (max-width: $valueSize) {
+      display: none !important;
+    }
+  }
+}
+
+@each $keySize, $valueSize in $screen-breakpoints {
+  [visible-block-#{$keySize}] {
+    @media (min-width: $valueSize) {
+      display: block;
+    }
+  }
+}
+
+@each $keySize, $valueSize in $screen-breakpoints {
+  [visible-flex-#{$keySize}] {
+    @media (min-width: $valueSize) {
+      display: flex !important;
+    }
+  }
+}
+
+@each $keySize, $valueSize in $screen-breakpoints {
+  [visible-inline-block-#{$keySize}] {
+    @media (min-width: $valueSize) {
+      display: inline-block;
+    }
+  }
+}
+
+// Set the base font to use as we scale using rems as font units.
+@each $keySize, $valueSize in $screen-breakpoints {
+  @media (min-width: $valueSize) {
+    html {
+      font-size: map-get($screen-rem-bases, $keySize);
+    }
+  }
+
+}

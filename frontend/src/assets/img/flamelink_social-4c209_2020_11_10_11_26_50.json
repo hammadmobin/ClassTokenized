@@ -1,0 +1,334 @@
+{
+    "flamelink": {
+        "permissions": {
+            "1": {
+                "content": {
+                    "production": {
+                        "appointment": {
+                            "create": true,
+                            "delete": true,
+                            "update": true,
+                            "view": true
+                        }
+                    }
+                },
+                "environments": {
+                    "production": true
+                },
+                "id": "1",
+                "locales": {
+                    "production": {
+                        "en-US": {
+                            "allow": true
+                        }
+                    }
+                },
+                "media": {
+                    "create": true,
+                    "delete": true,
+                    "update": true,
+                    "view": true
+                },
+                "name": "Super Admin",
+                "navigation": {
+                    "production": {
+                        "create": true,
+                        "delete": true,
+                        "update": true,
+                        "view": true
+                    }
+                },
+                "permissions": {
+                    "create": true,
+                    "delete": true,
+                    "update": true,
+                    "view": true
+                },
+                "schemas": {
+                    "production": {
+                        "create": true,
+                        "delete": true,
+                        "update": true,
+                        "view": true
+                    }
+                },
+                "settings": {
+                    "backups": {
+                        "create": true,
+                        "delete": true,
+                        "update": true,
+                        "view": true
+                    },
+                    "customLinks": {
+                        "create": true,
+                        "delete": true,
+                        "update": true,
+                        "view": true
+                    },
+                    "environments": {
+                        "create": true,
+                        "delete": true,
+                        "update": true,
+                        "view": true
+                    },
+                    "general": {
+                        "create": true,
+                        "delete": true,
+                        "update": true,
+                        "view": true
+                    },
+                    "globals": {
+                        "create": true,
+                        "delete": true,
+                        "update": true,
+                        "view": true
+                    },
+                    "locales": {
+                        "create": true,
+                        "delete": true,
+                        "update": true,
+                        "view": true
+                    },
+                    "workflows": {
+                        "create": true,
+                        "delete": true,
+                        "update": true,
+                        "view": true
+                    }
+                },
+                "users": {
+                    "create": true,
+                    "delete": true,
+                    "update": true,
+                    "view": true
+                },
+                "webhooks": {
+                    "create": true,
+                    "delete": true,
+                    "update": true,
+                    "view": true
+                },
+                "workflows": {},
+                "__meta__": {
+                    "docId": "1"
+                }
+            }
+        },
+        "settings": {
+            "defaultLocale": "en-US",
+            "general": {
+                "defaultPermissionsGroup": "1",
+                "imageSizes": [
+                    {
+                        "height": 9999,
+                        "quality": 1,
+                        "width": 375
+                    },
+                    {
+                        "height": 9999,
+                        "quality": 1,
+                        "width": 667
+                    },
+                    {
+                        "height": 9999,
+                        "quality": 1,
+                        "width": 900
+                    },
+                    {
+                        "height": 9999,
+                        "quality": 1,
+                        "width": 1080
+                    },
+                    {
+                        "height": 9999,
+                        "quality": 1,
+                        "width": 1440
+                    },
+                    {
+                        "height": 9999,
+                        "quality": 1,
+                        "width": 1920
+                    }
+                ],
+                "__meta__": {
+                    "docId": "general"
+                },
+                "id": "general"
+            },
+            "backups": {},
+            "environments": {
+                "production": {
+                    "id": "production",
+                    "name": "Production",
+                    "__meta__": {
+                        "docId": "production"
+                    }
+                }
+            },
+            "locales": {
+                "en-US": {
+                    "id": "en-US",
+                    "name": "English (USA)",
+                    "__meta__": {
+                        "docId": "en-US"
+                    }
+                }
+            }
+        },
+        "workflows": {},
+        "environments": {
+            "production": {
+                "schemas": {
+                    "appointment": {
+                        "__meta__": {
+                            "createdBy": "PcG1CrTdyRSNhdx7ndTTPOaiNZF3",
+                            "createdDate": {
+                                "seconds": 1605003772,
+                                "nanoseconds": 102000000
+                            },
+                            "docId": "KtKhfiwpJegXFyh2xvcl",
+                            "env": "production",
+                            "fl_id": "appointment"
+                        },
+                        "description": "Date between professional and patient",
+                        "enabled": true,
+                        "fields": [
+                            {
+                                "conditions": [],
+                                "constraints": [],
+                                "defaultValue": "",
+                                "description": "",
+                                "gridColumns": {
+                                    "lg": 12,
+                                    "md": 12,
+                                    "sm": 12,
+                                    "xs": 12
+                                },
+                                "hidden": false,
+                                "id": 1605003725712,
+                                "key": "field_1605003725712",
+                                "readOnly": false,
+                                "show": true,
+                                "title": "Field",
+                                "type": "text"
+                            },
+                            {
+                                "conditions": [],
+                                "constraints": [],
+                                "defaultValue": "",
+                                "description": "",
+                                "gridColumns": {},
+                                "hidden": false,
+                                "id": 1605003727757,
+                                "key": "field_1605003727757",
+                                "readOnly": false,
+                                "show": false,
+                                "title": "Field",
+                                "type": "textarea"
+                            },
+                            {
+                                "conditions": [],
+                                "constraints": [],
+                                "defaultValue": 0,
+                                "description": "",
+                                "gridColumns": {},
+                                "hidden": false,
+                                "id": 1605003764627,
+                                "key": "field_1605003764637",
+                                "max": 999,
+                                "min": 0,
+                                "multiple": false,
+                                "readOnly": false,
+                                "show": false,
+                                "step": 1,
+                                "title": "Field",
+                                "type": "range",
+                                "unit": ""
+                            },
+                            {
+                                "conditions": [],
+                                "constraints": [],
+                                "defaultValue": "",
+                                "description": "",
+                                "gridColumns": {},
+                                "hidden": false,
+                                "id": 1605003766182,
+                                "key": "field_1605003766183",
+                                "readOnly": false,
+                                "show": false,
+                                "step": null,
+                                "title": "Field",
+                                "type": "number"
+                            }
+                        ],
+                        "group": "Appointment",
+                        "icon": "",
+                        "id": "appointment",
+                        "sortable": true,
+                        "title": "Appointment",
+                        "type": "collection"
+                    }
+                },
+                "content": {
+                    "appointment": {
+                        "en-US": {
+                            "DV9r9D5z5m5VYN6UUM0O": {
+                                "__meta__": {
+                                    "createdBy": "PcG1CrTdyRSNhdx7ndTTPOaiNZF3",
+                                    "createdDate": {
+                                        "seconds": 1605003864,
+                                        "nanoseconds": 871000000
+                                    },
+                                    "docId": "DV9r9D5z5m5VYN6UUM0O",
+                                    "env": "production",
+                                    "fl_id": "DV9r9D5z5m5VYN6UUM0O",
+                                    "locale": "en-US",
+                                    "schema": "appointment",
+                                    "schemaRef": "KtKhfiwpJegXFyh2xvcl",
+                                    "schemaType": "collection",
+                                    "status": "publish"
+                                },
+                                "field_1605003725712": "Test",
+                                "field_1605003727757": "long text test",
+                                "field_1605003764637": "503",
+                                "field_1605003766183": "",
+                                "id": "DV9r9D5z5m5VYN6UUM0O",
+                                "order": 0,
+                                "parentId": 0
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "webhooks": {},
+        "users": {
+            "PcG1CrTdyRSNhdx7ndTTPOaiNZF3": {
+                "__meta__": {
+                    "docId": "PcG1CrTdyRSNhdx7ndTTPOaiNZF3"
+                },
+                "displayName": "Jose Iñesta Vaquera",
+                "email": "inejose@gmail.com",
+                "enabled": "Yes",
+                "firstName": "",
+                "id": "PcG1CrTdyRSNhdx7ndTTPOaiNZF3",
+                "lastName": "",
+                "permissions": "1"
+            }
+        },
+        "media": {
+            "folders": {
+                "root": {
+                    "id": "root",
+                    "name": "Root",
+                    "order": 0,
+                    "parentId": 0,
+                    "__meta__": {
+                        "docId": "root"
+                    }
+                }
+            },
+            "files": {}
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<app-main-nav></app-main-nav>
+<ion-content>
+  <ion-row *ngIf="nftDetails" class="nft-details-container ion-no-padding">
+    <ion-col size-sm="6" size-xs="12">
+      <app-nft-visual [imgUrl]="nftDetails.imgUrl"></app-nft-visual>
+    </ion-col>
+    <ion-col size-sm="6" size-xs="12">
+      <app-nft-item-details [nftDetails]="nftDetails"></app-nft-item-details>
+    </ion-col>
+  </ion-row>
+  <app-footer></app-footer>
+</ion-content>
+

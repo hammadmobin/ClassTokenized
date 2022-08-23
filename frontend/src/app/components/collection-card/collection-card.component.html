@@ -1,0 +1,17 @@
+<ion-card *ngIf="collection" class="nft-card-info collection-card-info">
+  <div class="collection-rank-container">
+    <ion-badge class="rank-badge" color="primary">{{collection.rank}}</ion-badge>
+  </div>
+  <div class="collection-avatar-container">
+    <ion-avatar class="collection-avatar">
+      <img [src]="collection.imgUrl">
+    </ion-avatar>
+    <h4 class="dark-text collection-title">{{collection.title | titlecase}}</h4>
+  </div>
+  <div class="collection-floor-container">
+    <ion-text class="price-value">
+      <b>{{collection.ethFloorPrice}} </b>
+      <span class="price-coin-type"> ETH</span>
+    </ion-text>
+  </div>
+</ion-card>

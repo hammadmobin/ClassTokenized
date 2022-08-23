@@ -1,0 +1,49 @@
+@import "src/theme/screen";
+$hero-text: (
+        'xs': 1.5rem,
+        'sm': 2rem,
+        'md': 3rem,
+        'lg': 3rem,
+        'xl': 3rem
+) !default;
+
+.hero {
+  height: 18.75rem;
+  width: 100%;
+  border-radius: 1.9rem;
+  //background-repeat: no-repeat;
+  background: linear-gradient(101.12deg, #EB1484 27.35%, #C91CC3 99.99%, #C81CC5 100%, #C81CC5 100%);
+  background-size: cover;
+  background-position: center;
+  //background: var(--ion-color-medium);
+  //background-image: url("/assets/img/home/feature-banner-sample.png");
+  position: relative;
+}
+
+
+.hero-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 3.312rem;
+  height: 100%;
+}
+
+.hero-title {
+  margin: 0;
+  padding: 0;
+  min-height: 5rem;
+  font-size: 3rem;
+  color: var(--ion-color-light);
+  font-family: "Poppins-Bold" !important;
+}
+
+
+@each $keySize, $value in $screen-breakpoints {
+  $fontSize: map-get($hero-text, $keySize);
+  @media (min-width: $value) {
+    .hero-title {
+      font-size: $fontSize;
+    }
+  }
+}

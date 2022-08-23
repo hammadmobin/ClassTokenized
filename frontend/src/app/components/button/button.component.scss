@@ -1,0 +1,101 @@
+$radius: 0.925rem;
+$bg-gradient: linear-gradient(101.12deg, #EB1484 27.35%, #C91CC3 99.99%, #C81CC5 100%, #C81CC5 100%);
+$bg-gradient-old: linear-gradient(to right, var(--ion-color-primary-shade), var(--ion-color-primary), var(--ion-color-secondary-tint));
+
+$bg-gradient-hover: linear-gradient(to right, var(--ion-color-primary), var(--ion-color-primary-tint));
+$btn-width: 8rem;
+$btn-height: 3rem;
+$btn-width-focus: $btn-width * 1.05;
+$primary-bg-color: var(--ion-color-primary);
+
+
+.default-btn-transition {
+  transition-property: font-size, min-width, background, background-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+
+.btn-gradient-text {
+  font-size: 1rem;
+  font-family: "Poppins-Semi-Bold";
+  background: $bg-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 2rem;
+}
+
+.module-mid-wrap {
+  background: white;
+  padding: 0 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 0.625rem;
+  border-width: 0.1rem;
+  border-style: solid;
+}
+
+
+.module-border-wrap, primary-btn {
+  position: relative;
+  background: $bg-gradient;
+  padding: 0.125rem;
+  min-width: $btn-width;
+
+  border-radius: $radius;
+
+  @extend .default-btn-transition;
+}
+
+
+.module, .module-primary {
+  padding: 0.5rem 2rem;
+  border-radius: $radius;
+  text-align: center;
+  min-width: $btn-width;
+  font-family: "Poppins-Bold";
+}
+
+.module-primary {
+  color: var(--ion-color-primary-contrast);
+}
+
+.primary-btn {
+  padding: 0;
+}
+
+.white-container {
+  background: white;
+  border-radius: $radius;
+
+}
+
+//Hover, Focus, Active and other states
+
+.module-border-wrap:hover, .module-border-wrap:focus, .module-border-wrap:active,
+.module:hover, .module:focus, .module:active,
+.primary-btn:hover, .primary-btn:focus, .primary-btn:active {
+  background: $bg-gradient-hover;
+  cursor: pointer;
+  @extend .default-btn-transition;
+}
+
+
+.btn-gradient-text:hover, .btn-gradient-text:focus, .btn-gradient-text:active {
+  background: var(--ion-color-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @extend .default-btn-transition;
+}
+
+
+.module-primary:hover, .module-primary:focus, .module-primary:active {
+  @extend .default-btn-transition;
+  background: $primary-bg-color;
+  color: var(--ion-color-primary-contrast);
+}
+
+// Remove gradient border radius on hover
+.primary-btn:hover, .primary-btn:focus, .primary-btn:active, {
+  @extend .default-btn-transition;
+  background: transparent;
+}

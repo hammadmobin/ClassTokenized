@@ -1,0 +1,45 @@
+$font-family-base: "Open Sans", sans-serif !default;
+
+body{
+  font-family: "Open Sans" !important;
+  font-weight: 300 !important;
+}
+
+h1, h2, p, button, ion-title {
+  font-family: "Open Sans" !important;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: light;
+  font-weight: 300;
+  src: url('/assets/fonts/opensans/OpenSans-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/opensans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: semi-bold;
+  font-weight: 600;
+  src: url('/assets/fonts/opensans/OpenSans-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: bold;
+  font-weight: 700;
+  src: url('/assets/fonts/opensans/OpenSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: extra-bold;
+  font-weight: 900;
+  src: url('/assets/fonts/opensans/OpenSans-ExtraBold.ttf');
+}

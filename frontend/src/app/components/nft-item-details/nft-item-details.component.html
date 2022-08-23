@@ -1,0 +1,56 @@
+<div *ngIf="nftDetails" class="nft-item-details-container">
+<!--    TODO update font sizes for smaller screens - rem base might be too small and thus currently causes unreadable small text fonts on mobile devices-->
+    <!--    NFT details-->
+    <div class="item-detail-row ">
+        <div class="nft-title-container">
+            <ion-label class="nft-title">{{nftDetails.title | titlecase}}</ion-label>
+        </div>
+        <div class=" nft-faves-container">
+            <ion-badge class="nft-faves-badge">
+                <ion-icon class="title-icon" name="heart"></ion-icon>
+                <div class="title-text">{{nftDetails.faves}}</div>
+            </ion-badge>
+        </div>
+    </div>
+    <!--    NFT price and collection count details-->
+    <div class="price-details-container">
+
+    </div>
+    <div class="price-details">
+        <div class="collection-count-container">
+            From <span class="price-digit"> {{nftDetails.ethPrice}} ETH</span>
+        </div>
+        <div class="separator-dot">
+            <div class="dot">
+            </div>
+        </div>
+        <div class="collection-count-container">
+            <span class="nft-item-number"> 20 </span> of <span class="collection-item-total"> 25 </span> available
+        </div>
+    </div>
+    <!--    Creator Details-->
+    <div class="item-detail-row">
+        <div class="owner-profile-container">
+            <p class="creator-label"> Creator</p>
+            <div class="creator-avatar-container">
+                <ion-avatar class="owner-avatar">
+                    <img [src]="nftDetails.ownerImg">
+                </ion-avatar>
+                <ion-text class="creator-title">
+                    Mia Ayana
+                </ion-text>
+            </div>
+        </div>
+    </div>
+    <!--    Details tabs-->
+    <div class="details-info-container">
+        <app-nft-details-tabs></app-nft-details-tabs>
+    </div>
+    <!--    Details actions-->
+    <div class="item-detail-row">
+        <div class="item-actions">
+            <app-button [btnOptions]="buyBtnOptions"></app-button>
+            <app-button [btnOptions]="offerBtnOptions"></app-button>
+        </div>
+    </div>
+</div>

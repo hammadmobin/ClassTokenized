@@ -1,0 +1,41 @@
+@import "src/theme/screen";
+@import "src/app/pages/profile/profile.page.scss";
+@import "src/app/components/nft-card/nft-card.component.scss";
+@import "src/theme/font-poppins.scss";
+
+$collection-row-padding-map: (
+        'xs': 0.5rem 1rem,
+        'sm': 0.5rem 2rem,
+        'md': 0.5rem 7rem,
+        'lg': 0.5rem 13rem,
+        'xl': 0.5rem 13rem
+) !default;
+
+.row-container, .collection-row-container, .collections-container-row {
+  margin-top: 3.5rem;
+  padding: 0.5rem 13rem;
+  display: flex;
+  justify-content: center;
+}
+
+.collections-container-row {
+  justify-content: flex-start;
+}
+
+.collection-row-container {
+  margin-top: 0;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+
+@each $keySize, $valueSize in $screen-breakpoints {
+  $collection-row-padding: map-get($collection-row-padding-map, $keySize);
+  @media (min-width: $valueSize) {
+    .collection-row-container, .row-container, .collections-container-row {
+      padding: $collection-row-padding;
+    }
+  }
+}
