@@ -25,6 +25,13 @@ const Home = () => {
             sx={{ mr: 2 }}
           >
           </IconButton>
+      <Box
+      sx={{
+        width: 30,
+        height: 30,
+      }}>
+      <span role="img"  aria-label="dog">🖖 </span>
+      </Box>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1,  color: '#710117' }}>
             ClassTokenized
           </Typography>
@@ -38,7 +45,7 @@ const Home = () => {
         </Toolbar>
       </AppBar>
     </Box>
-    <img src={background} alt="logo"  width= "1600px" height= "800" />
+    {/* <img src={background} alt="logo"  width= "1600px" height= "800" /> */}
     </div>
   );
 }
