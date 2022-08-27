@@ -9,9 +9,9 @@ import Courseid from './components/CourseId';
 import Nft from './components/Nft';
 import Home from './components/Home';
 
-
 function App() {
   return (    
+    <div >
   <StrictMode>
     <BrowserRouter>
       <header>
@@ -26,6 +26,7 @@ function App() {
       </Routes>
     </BrowserRouter>
   </StrictMode>
+  </div>
   );
 }
 
