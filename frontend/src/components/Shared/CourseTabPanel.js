@@ -5,6 +5,8 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import CardComponent from './CardComponent';
 import createCourse from '../createCourse'
+import ListComponent from "./listComponent"
+import LinksComponents from './LinksComponents';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -50,21 +52,16 @@ export default function BasicTabs() {
     <Box   sx={{ width: '98%' , paddingLeft:2 }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Explore" {...a11yProps(0)} />
-          <Tab label="Enrolled" {...a11yProps(1)} />
-          <Tab label="Your Courses" {...a11yProps(2)} />
+          <Tab label="Links" {...a11yProps(0)} />
+          <Tab label="Files" {...a11yProps(1)} />
+          <Tab label="Review" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-      <div style={{  display: "flex" ,justifyContent:'space-evenly' }} >
-          <CardComponent   /> 
-          <CardComponent   />
-          <CardComponent   />
-          </div>
-      
+      <LinksComponents />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <ListComponent />
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three

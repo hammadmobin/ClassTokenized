@@ -19,7 +19,7 @@ function App() {
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:username" element={<Users />} />
-          <Route path="/course" element={<Course />} />
+          <Route path="/course" element={<Users />} />
           <Route path="/course/:id" element={<Courseid />} />
           <Route path="/course/:id/:nftid" element={<Nft />} />
           <Route path="/cerificates" element={<cerificates />} />
