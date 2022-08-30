@@ -1,7 +1,4 @@
-import background from "../assets/5853.jpg";
 import * as React from 'react';
-import ParticleComponent from "./particleComponent";
-
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -10,9 +7,9 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Container from '@mui/material/Container';
 import FormDialog from '@mui/material/CssBaseline';
-import Wallet from "./Shared/Wallet"
+import Wallet from "./Wallet"
 
-const Home = () => {
+const navbarComponent = () => {
   return (
     <div >
        <Box sx={{ flexGrow: 1 }}>
@@ -45,9 +42,9 @@ const Home = () => {
         </Box>
         </Toolbar>
       </AppBar>
-    </Box>    
+    </Box>
     </div>
   );
 }
 
-export default Home;
+export default navbarComponent;
