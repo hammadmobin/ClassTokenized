@@ -35,11 +35,9 @@ export default function FormDialog() {
         Create Course
       </Button>
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Subscribe</DialogTitle>
+        <DialogTitle>Create Course</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            To subscribe to this website, please enter your email address here. We
-            will send updates occasionally.
           </DialogContentText>
           <TextField
             autoFocus
@@ -90,7 +88,7 @@ export default function FormDialog() {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleClose}>Subscribe</Button>
+          <Button onClick={handleClose}>Create</Button>
         </DialogActions>
       </Dialog>
     </div>

@@ -6,6 +6,7 @@ import TabPanel from "./Shared/TabPanel";
 import Button from '@mui/material/Button';
 import { color } from "@mui/system";
 import FormDialog from './createCourse'
+import navbar from "./Shared/navbar";
 
 const Users = () => {
     const { username } = useParams();

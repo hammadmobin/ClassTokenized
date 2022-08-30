@@ -1,7 +1,6 @@
 import background from "../assets/5853.jpg";
 import * as React from 'react';
 import ParticleComponent from "./particleComponent";
-
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,7 +11,7 @@ import Container from '@mui/material/Container';
 import FormDialog from '@mui/material/CssBaseline';
 import Wallet from "./Shared/Wallet"
 
-const Home = () => {
+const Homebar = () => {
   return (
     <div >
        <Box sx={{ flexGrow: 1 }}>
@@ -45,9 +44,15 @@ const Home = () => {
         </Box>
         </Toolbar>
       </AppBar>
-    </Box>    
+    </Box>
+    <Box
+      sx={{
+        width: 370,
+        height: 900,
+      }}><ParticleComponent /></Box>
+       
     </div>
   );
-}
+};
 
-export default Home;
+export default Homebar;
