@@ -5,7 +5,7 @@ import background from "../assets/5853.jpg";
 import TabPanel from "./Shared/TabPanel";
 import Button from '@mui/material/Button';
 import { color } from "@mui/system";
-import FormDialog from './createCourse'
+import WrappedDetails from './createCourse'
 import navbar from "./Shared/navbar";
 
 const Users = () => {
@@ -15,7 +15,7 @@ const Users = () => {
       <Home />
       <div style={{  display: "flex" ,justifyContent:'space-between' ,paddingLeft:20 }}>
     <h1 >Hey, { username } </h1>
-    <FormDialog />
+    <WrappedDetails />
 
     </div>
     <TabPanel />

@@ -1,10 +1,12 @@
-import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import CardComponent from './CardComponent';
 import createCourse from '../createCourse'
+import CoursesLists from '../../services/CoursesLists'
+import React, { useEffect, useState } from "react";
+
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -14,6 +16,8 @@ interface TabPanelProps {
 
 function TabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;
+ 
+
 
   return (
     <div
@@ -41,6 +45,19 @@ function a11yProps(index: number) {
 
 export default function BasicTabs() {
   const [value, setValue] = React.useState(0);
+  const [courses, setcourses] = useState([]);
+
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await CoursesLists.File.list();
+      setcourses(data);
+    };
+    getData();
+  }, []);
+
+
+
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -57,9 +74,17 @@ export default function BasicTabs() {
       </Box>
       <TabPanel value={value} index={0}>
       <div style={{  display: "flex" ,justifyContent:'space-evenly' }} >
-          <CardComponent   /> 
-          <CardComponent   />
-          <CardComponent   />
+          
+      {courses.map((course) => (
+        <CardComponent
+          title={course.title}
+          description={course.description}
+          courseID={course.courseID}
+          fees={course.fees}
+          key={course.id}
+        />
+        ))}
+
           </div>
       
       </TabPanel>

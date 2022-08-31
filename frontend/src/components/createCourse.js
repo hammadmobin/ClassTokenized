@@ -1,4 +1,5 @@
-import * as React from 'react';
+//import * as React from 'react';
+import { Component, useParams } from "react";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
@@ -9,20 +10,58 @@ import DialogTitle from '@mui/material/DialogTitle';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
 import IconButton from '@mui/material/IconButton';
 import Stack from '@mui/material/Stack';
+import axios from 'axios';
 
 
-export default function FormDialog() {
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
+class FormDialog extends Component {
+  state = {
+    open: false, title: '', name: '', description:'', fees: 0, courseID:''
+  }
+  
+  handleClickOpen = () => {
+    this.setState({open : true})
   };
 
-  const handleClose = () => {
-    setOpen(false);
+  handleClose = () => {
+    this.setState({open : false})
+   // setOpen(false);
   };
 
+  handleChange = event => {
+    this.setState({ name: event.target.value });
+  }
+
+  titleChange = event => {
+    this.setState({ title: event.target.value });
+  }
+  descriptionChange = event => {
+    this.setState({ description: event.target.value });
+  }
+  feesChange = event => {
+    this.setState({ fees: event.target.value });
+  }
+  courseIDChange = event => {
+    this.setState({ courseID: event.target.value });
+  }
+
+
+
+
+  handleSubmit = event => {
+    event.preventDefault();
+
+    axios.post(`http://localhost:3000/courses`, { title: this.state.title, description: this.state.description, fees: this.state.fees, courseID: this.state.courseID  })
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+      this.setState({open : false})
+  }
+
+  render() {
+  
   return (
+    
     <div>
       <Button variant="contained" style=
     {{
@@ -31,47 +70,54 @@ export default function FormDialog() {
               top:20,
               right:70,
               
-    }}  onClick={handleClickOpen}>
+    }}  onClick={this.handleClickOpen}>
         Create Course
       </Button>
-      <Dialog open={open} onClose={handleClose}>
+      
+      <Dialog  open={this.state.open} onClose={this.handleClose}>
         <DialogTitle>Create Course</DialogTitle>
         <DialogContent>
           <DialogContentText>
           </DialogContentText>
+          
           <TextField
             autoFocus
             margin="dense"
-            id="name"
-            label="Course Name"
+            name="title"
+            label="Course Title"
             type="text"
             fullWidth
             variant="standard"
+            onChange={this.titleChange}
           />
                     <TextField
             autoFocus
             margin="dense"
-            id="name"
+            name="title"
             label="Course ID"
             type="text"
             fullWidth
             variant="standard"
+            onChange={this.courseIDChange}
           />
                     <TextField
             autoFocus
             margin="dense"
-            id="name"
+            name="title"
             label="ETH"
             type="number"
             fullWidth
             variant="standard"
+            onChange={this.feesChange}
           />
 
         <TextareaAutosize
         aria-label="minimum height"
+        name="title"
         minRows={3}
         label="ETH"
         placeholder="Descriptions"
+        onChange={this.descriptionChange}
         style={{ top:50, width: 550 }}
         />
 
@@ -87,10 +133,20 @@ export default function FormDialog() {
 
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleClose}>Create</Button>
+          <Button onClick={this.handleClose}>Cancel</Button>
+          <Button onClick={this.handleSubmit}>Create</Button>
         </DialogActions>
       </Dialog>
     </div>
   );
 }
+}
+
+
+const WrappedDetails = () => {
+  // const params = useParams();
+  return <FormDialog />//params={params} />;
+};
+
+
+export default WrappedDetails;

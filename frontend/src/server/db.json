@@ -1,18 +1,18 @@
 {
-    "courses": [
-      {
-        "id": 1,
-        "title": "Angular 13 Fundamentals",
-        "description": "Learn the fundamentals of Angular 13",
-        "percentComplete": 26,
-        "favorite": true
-      },
-      {
-        "id": 2,
-        "title": "Angular 14 Fundamentals",
-        "description": "Learn the fundamentals of Angular 13",
-        "percentComplete": 26,
-        "favorite": true
-      }
-    ]
-  }
+  "courses": [
+    {
+      "id": 1,
+      "title": "Angular 13 Fundamentals",
+      "description": "Learn the fundamentals of Angular 13",
+      "courseID": "CS101",
+      "fees": 0.09
+    },
+    {
+      "id": 2,
+      "title": "Angular 14 Fundamentals",
+      "description": "Learn the fundamentals of Angular 13",
+      "courseID": "CS101",
+      "fees": 0.09
+    }
+  ]
+}
